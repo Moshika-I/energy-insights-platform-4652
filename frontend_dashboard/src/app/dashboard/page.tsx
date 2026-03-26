@@ -93,9 +93,9 @@ function DashboardInner() {
         </>
       }
     >
-      <div className="space-y-6">
+      <div className="core-section mx-auto w-full max-w-5xl space-y-6">
         {/* Hero / header */}
-        <section className="relative overflow-hidden rounded-[28px] bg-white/75 p-6 ring-1 ring-black/5 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur sm:p-7">
+        <section className="relative overflow-hidden rounded-[28px] bg-white/75 p-[20px] ring-1 ring-black/5 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur sm:p-7">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-cyan-500/10"
@@ -188,25 +188,61 @@ function DashboardInner() {
           </div>
         </section>
 
-        {/* Chart card */}
-        <Card
-          title="Consumption & baseline"
-          subtitle="Interactive chart with mock baseline and anomaly markers (wired for backend integration)."
-          footer={
-            <div className="flex flex-col gap-2 text-xs text-[var(--color-secondary)] sm:flex-row sm:items-center sm:justify-between">
-              <span>Tip: upload a CSV to replace mock series.</span>
-              <a
-                className="inline-flex items-center gap-2 font-semibold text-blue-700 hover:underline"
-                href="/upload"
-              >
-                Upload CSV
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" />
-              </a>
+        {/* Core widgets: subtle grid for neat alignment */}
+        <section className="widget-grid">
+          <Card
+            title="Consumption & baseline"
+            subtitle="Interactive chart with mock baseline and anomaly markers (wired for backend integration)."
+            footer={
+              <div className="flex flex-col gap-2 text-xs text-[var(--color-secondary)] sm:flex-row sm:items-end sm:justify-between">
+                <span>Tip: upload a CSV to replace mock series.</span>
+                <div className="flex justify-end">
+                  <a
+                    className="inline-flex items-center gap-2 font-semibold text-blue-700 hover:underline"
+                    href="/upload"
+                  >
+                    Upload CSV
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </div>
+            }
+          >
+            <EnergyChart aggregation={aggregation} points={series} />
+          </Card>
+
+          <Card
+            title="Reports & exports"
+            subtitle="Quick actions for sharing insights (placeholder)."
+            tone="tint"
+            footer={
+              <div className="flex items-end justify-end">
+                <a
+                  href="/upload"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
+                >
+                  Upload CSV
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            }
+          >
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div className="rounded-3xl bg-white/70 p-[20px] ring-1 ring-black/5 shadow-sm backdrop-blur">
+                <div className="text-xs font-semibold text-[var(--color-secondary)]">Energy usage</div>
+                <div className="mt-2 text-sm leading-6 text-[var(--color-secondary)]">
+                  Export summaries and share baseline vs actual variance.
+                </div>
+              </div>
+              <div className="rounded-3xl bg-white/70 p-[20px] ring-1 ring-black/5 shadow-sm backdrop-blur">
+                <div className="text-xs font-semibold text-[var(--color-secondary)]">Analytics</div>
+                <div className="mt-2 text-sm leading-6 text-[var(--color-secondary)]">
+                  Package charts + key metrics into an internal report.
+                </div>
+              </div>
             </div>
-          }
-        >
-          <EnergyChart aggregation={aggregation} points={series} />
-        </Card>
+          </Card>
+        </section>
       </div>
     </AppShell>
   );

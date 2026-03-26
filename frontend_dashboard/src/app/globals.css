@@ -86,3 +86,30 @@ a {
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
 }
+
+/* Shared layout utilities for neat, consistent alignment across pages. */
+.core-section {
+  /* Center content area and provide consistent vertical rhythm */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Consistent "widget" spacing and a subtle grid rhythm for dense dashboards. */
+.widget-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem; /* 20px */
+}
+
+@media (min-width: 1024px) {
+  .widget-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+/* A consistent 20px padding + rounded corners surface utility (matches request). */
+.surface-20 {
+  border-radius: 1.5rem; /* rounded-3xl equivalent */
+  padding: 20px;
+}

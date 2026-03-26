@@ -30,7 +30,8 @@ export function Card({
   return (
     <section
       className={[
-        "relative overflow-hidden rounded-3xl p-5 sm:p-6",
+        // Use consistent 20px padding by default, slightly larger on larger screens.
+        "relative overflow-hidden rounded-3xl p-[20px] sm:p-6",
         "ring-1 ring-black/5",
         "shadow-[0_12px_35px_rgba(15,23,42,0.08)]",
         toneClasses,
