@@ -1,10 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  --color-primary: #111827; /* text */
+  --color-secondary: #64748b; /* muted */
+  --color-accent: #3b82f6; /* primary */
+  --color-success: #06b6d4; /* success/accent */
+  --color-error: #ef4444; /* error */
+  --color-background: #f9fafb; /* app background */
+  --color-surface: #ffffff; /* cards */
+  --ring: 59 130 246; /* tailwind blue-500 */
 }
 
 * {
@@ -23,4 +27,14 @@ body {
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--ring));
+  outline-offset: 2px;
 }
