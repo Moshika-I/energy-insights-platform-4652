@@ -58,11 +58,7 @@ export function AppShell({
               {user?.email ?? "Not signed in"}
             </div>
 
-            <button
-              type="button"
-              onClick={() => signOut().catch(console.error)}
-              className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-            >
+            <button type="button" onClick={() => signOut().catch(console.error)} className="btn-primary inline-flex items-center gap-2">
               <FontAwesomeIcon icon={faArrowRightFromBracket} className="h-4 w-4" />
               Sign out
             </button>
@@ -112,10 +108,7 @@ export function AppShell({
               <div className="mt-1 text-xs leading-5 text-[var(--color-secondary)]">
                 Upload a CSV to replace mock series and explore baselines with real data.
               </div>
-              <Link
-                href="/upload"
-                className="mt-3 inline-flex items-center gap-2 rounded-xl bg-white px-3 py-2 text-xs font-semibold text-blue-700 ring-1 ring-black/5 hover:bg-black/5"
-              >
+              <Link href="/upload" className="btn-secondary mt-3 inline-flex items-center gap-2 px-3 py-2 text-xs">
                 Upload now <FontAwesomeIcon icon={faArrowRightFromBracket} className="h-3.5 w-3.5 rotate-180" />
               </Link>
             </div>

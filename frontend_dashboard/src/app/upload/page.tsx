@@ -81,7 +81,7 @@ function UploadInner() {
                 whileTap={prefersReducedMotion ? undefined : { scale: 0.98 }}
                 transition={transition}
                 onClick={() => router.push("/dashboard")}
-                className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 disabled:opacity-50"
+                className="btn-primary inline-flex items-center gap-2 disabled:opacity-50"
               >
                 <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4" />
                 Use in dashboard
@@ -97,7 +97,7 @@ function UploadInner() {
                   // For now we just confirm parsing worked.
                   alert(`Parsed ${rows.length} rows. Backend ingestion endpoint not implemented yet.`);
                 }}
-                className="inline-flex items-center gap-2 rounded-2xl bg-white/80 px-4 py-2.5 text-sm font-semibold text-[var(--color-primary)] ring-1 ring-black/10 shadow-sm transition hover:bg-white disabled:opacity-50"
+                className="btn-secondary inline-flex items-center gap-2 disabled:opacity-50"
               >
                 <FontAwesomeIcon icon={faPaperPlane} className="h-4 w-4 text-slate-500" />
                 Send to backend (soon)

@@ -63,16 +63,10 @@ function LandingInner() {
             </Link>
 
             <nav className="flex items-center gap-2">
-              <Link
-                href="/login"
-                className="rounded-2xl bg-white/70 px-4 py-2.5 text-sm font-semibold text-[var(--color-primary)] ring-1 ring-black/10 shadow-sm backdrop-blur transition hover:bg-white"
-              >
+              <Link href="/login" className="btn-secondary">
                 Sign in
               </Link>
-              <Link
-                href="/signup"
-                className="rounded-2xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-              >
+              <Link href="/signup" className="btn-primary">
                 Create account
               </Link>
             </nav>
@@ -103,17 +97,11 @@ function LandingInner() {
                 </p>
 
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <Link
-                    href="/signup"
-                    className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-                  >
+                  <Link href="/signup" className="btn-primary inline-flex items-center justify-center gap-2 px-5 py-3">
                     Get started
                     <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4" />
                   </Link>
-                  <Link
-                    href="/login"
-                    className="inline-flex items-center justify-center rounded-2xl bg-white/70 px-5 py-3 text-sm font-semibold text-[var(--color-primary)] ring-1 ring-black/10 shadow-sm backdrop-blur transition hover:bg-white"
-                  >
+                  <Link href="/login" className="btn-secondary inline-flex items-center justify-center px-5 py-3">
                     Sign in to dashboard
                   </Link>
                 </div>
@@ -305,16 +293,10 @@ function LandingInner() {
               </div>
             </div>
             <div className="flex gap-2">
-              <Link
-                href="/signup"
-                className="rounded-2xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-              >
+              <Link href="/signup" className="btn-primary px-5 py-3">
                 Create account
               </Link>
-              <Link
-                href="/login"
-                className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-[var(--color-primary)] ring-1 ring-black/10 transition hover:bg-black/5"
-              >
+              <Link href="/login" className="btn-secondary px-5 py-3">
                 Sign in
               </Link>
             </div>

@@ -192,11 +192,7 @@ export function AuthTwoPanel({
               </div>
             ) : null}
 
-            <button
-              type="submit"
-              disabled={busy}
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 disabled:opacity-60"
-            >
+            <button type="submit" disabled={busy} className="btn-primary group inline-flex w-full items-center justify-center gap-2 px-4 py-3 disabled:opacity-60">
               {busy ? (
                 <FontAwesomeIcon icon={faCircleNotch} spin className="h-4 w-4" />
               ) : (
@@ -220,7 +216,7 @@ export function AuthTwoPanel({
                         setError(null);
                         setNotice(null);
                       }}
-                      className="font-semibold text-blue-700 hover:underline"
+                      className="cool-link font-semibold"
                     >
                       Sign in
                     </button>
@@ -235,7 +231,7 @@ export function AuthTwoPanel({
                         setError(null);
                         setNotice(null);
                       }}
-                      className="font-semibold text-blue-700 hover:underline"
+                      className="cool-link font-semibold"
                     >
                       Create an account
                     </button>

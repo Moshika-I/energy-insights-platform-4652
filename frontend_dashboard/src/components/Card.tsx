@@ -24,7 +24,7 @@ export function Card({
   /** Standard card container for dashboard widgets with a softer "super-app" look. */
   const toneClasses =
     tone === "tint"
-      ? "bg-gradient-to-br from-blue-600/[0.06] via-white to-cyan-500/[0.05]"
+      ? "bg-gradient-to-br from-blue-600/[0.08] via-white to-cyan-500/[0.07]"
       : "bg-white";
 
   return (
@@ -34,6 +34,7 @@ export function Card({
         "relative overflow-hidden rounded-3xl p-[20px] sm:p-6",
         "ring-1 ring-black/5",
         "shadow-[0_12px_35px_rgba(15,23,42,0.08)]",
+        "transition hover:shadow-[0_18px_50px_rgba(15,23,42,0.12)] hover:ring-black/10",
         toneClasses,
       ].join(" ")}
     >

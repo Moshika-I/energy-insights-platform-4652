@@ -197,10 +197,7 @@ function DashboardInner() {
               <div className="flex flex-col gap-2 text-xs text-[var(--color-secondary)] sm:flex-row sm:items-end sm:justify-between">
                 <span>Tip: upload a CSV to replace mock series.</span>
                 <div className="flex justify-end">
-                  <a
-                    className="inline-flex items-center gap-2 font-semibold text-blue-700 hover:underline"
-                    href="/upload"
-                  >
+                  <a className="cool-link inline-flex items-center gap-2 font-semibold" href="/upload">
                     Upload CSV
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" />
                   </a>
@@ -217,10 +214,7 @@ function DashboardInner() {
             tone="tint"
             footer={
               <div className="flex items-end justify-end">
-                <a
-                  href="/upload"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
-                >
+                <a href="/upload" className="btn-primary inline-flex items-center gap-2">
                   Upload CSV
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" />
                 </a>
