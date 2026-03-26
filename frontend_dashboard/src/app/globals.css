@@ -38,3 +38,12 @@ a {
   outline: 2px solid rgb(var(--ring));
   outline-offset: 2px;
 }
+
+::selection {
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.bg-grid-subtle {
+  background-image: radial-gradient(rgba(17, 24, 39, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
